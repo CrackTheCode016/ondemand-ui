@@ -1,13 +1,9 @@
 <script setup lang="ts">
-import AccountCard from '~/components/AccountCard.vue'
 import Footer from '~/components/Footer.vue'
 import Header from '~/components/Header.vue'
 import OnDemandOrder from '~/components/OnDemandOrder.vue'
-import { useConnect } from '~/composables/useConnect'
-import { chainKeys } from '~/utils/sdk'
-import { unifyAddress } from './utils/formatters'
 
-const { selectedAccount } = useConnect()
+
 </script>
 
 <template>

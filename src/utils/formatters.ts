@@ -1,9 +1,7 @@
 import type { Prefix } from '~/utils/sdk'
 import { AccountId } from 'polkadot-api'
 
-const subscan: Record<Prefix, string> = {
-  dot: 'https://polkadot.subscan.io',
-  dot_asset_hub: 'https://assethub-polkadot.subscan.io',
+const subscan: Partial<Record<Prefix, string>> = {
   pas: 'https://paseo.subscan.io',
   pas_asset_hub: 'https://assethub-paseo.subscan.io',
 }
@@ -19,14 +17,20 @@ export function stripAddress(address: string): string {
 }
 
 export function explorerAccount(chain: Prefix, address?: string): string {
-  const url = new URL(subscan[chain])
+  const baseUrl = subscan[chain]
+  if (!baseUrl) return '#'
+  
+  const url = new URL(baseUrl)
   url.pathname = `/account/${address || ''}`
 
   return url.toString()
 }
 
 export function explorerDetail(chain: Prefix, hash: string): string {
-  const url = new URL(subscan[chain])
+  const baseUrl = subscan[chain]
+  if (!baseUrl) return '#'
+  
+  const url = new URL(baseUrl)
   url.pathname = `/extrinsic/${hash}`
 
   return url.toString()

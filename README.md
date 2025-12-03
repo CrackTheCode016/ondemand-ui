@@ -1,15 +1,24 @@
-# OnDemand UI
+# EduChain Dashboard
 
-A simple and minimal UI for creating OnDemand blocks on the Polkadot Paseo testnet using `polkadot-api`.
+A comprehensive dashboard for EduChain operations including OnDemand block ordering and reserve transfers, built with `polkadot-api` and Vue.js.
 
-## What is Ondemand coretime?
+## About EduChain Dashboard
 
-OnDemand coretime allow parachains to purchase individual blocks of execution time on Polkadot without needing a full core. This is useful for:
+EduChain Dashboard is a comprehensive interface for managing EduChain (Para 4883) operations on the Polkadot ecosystem. It provides essential tools for:
 
-- **Testing**: Test parachain functionality without long-term commitments
-- **Occasional Use**: Process transactions only when needed  
-- **Cost Efficiency**: Pay only for the blocks you use
-- **Development**: Quick iteration without parachain core commitments
+### Network Monitoring
+Real-time network statistics and connection status for EduChain. For detailed block information and transaction history, visit the full block explorer at [dev.papi.how](https://dev.papi.how).
+
+### OnDemand Coretime
+OnDemand coretime allows EduChain to purchase individual blocks of execution time on Polkadot without needing a full core. This is particularly useful for:
+
+- **Educational Testing**: Test blockchain functionality in educational environments
+- **Cost-Effective Learning**: Students and educators can experiment without long-term commitments
+- **Flexible Development**: Quick iteration cycles for educational blockchain projects
+- **Resource Management**: Pay only for the computational resources actually used
+
+### Cross-Chain Asset Management
+Seamlessly transfer assets between EduChain and AssetHub using reserve-based transfers powered by XCM (Cross-Consensus Messaging).
 
 ## Key Features
 
@@ -21,7 +30,12 @@ OnDemand coretime allow parachains to purchase individual blocks of execution ti
 - **Interval Mode**: Automatically place orders at configurable time intervals (5-3600 seconds)
 - **Finalization Mode**: Place new orders automatically when the previous block finalizes
 
-### 📊 **Real-time Monitoring**
+### � **Reserve Transfers**
+- **Cross-chain transfers**: Move tokens between parachains and AssetHub using XCM
+- **Bidirectional**: Support for both parachain-to-AssetHub and AssetHub-to-parachain transfers
+- **Dual signing modes**: Works with both wallet and development signing modes
+
+### �📊 **Real-time Monitoring**
 - Live transaction status updates
 - Order count tracking
 - Block finalization monitoring
@@ -166,8 +180,15 @@ const CONFIG = {
 
 📖 For more details, see the [PAPI Codegen documentation](https://papi.how/codegen).
 
-## 📚 Learn More
+## � Attribution
+
+The reserve transfer functionality is based on the excellent work by Francisco Aguirre:
+- **XCM Transfer Implementation**: https://github.com/franciscoaguirre/dot-reserve-change/blob/main/transfers.ts
+- Original implementation demonstrates proper XCM message structure for reserve-based transfers between chains
+
+## �📚 Learn More
 
 - [Vue 3 Documentation](https://vuejs.org/guide/typescript/overview.html#project-setup)
 - [PAPI Documentation](https://papi.how/)
 - [Polkadot Developer Portal](https://wiki.polkadot.network/)
+- [XCM Documentation](https://wiki.polkadot.network/docs/learn/xcm/)

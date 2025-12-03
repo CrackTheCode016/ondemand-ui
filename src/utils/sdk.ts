@@ -3,7 +3,7 @@ import { createClient } from 'polkadot-api'
 import { withPolkadotSdkCompat } from 'polkadot-api/polkadot-sdk-compat'
 import { getWsProvider } from 'polkadot-api/ws-provider'
 import { ref } from 'vue'
-import { dot, dot_asset_hub, pas, pas_asset_hub } from '~/descriptors'
+import { dot, dot_asset_hub, educhain, pas, pas_asset_hub } from '~/descriptors'
 
 const config = {
   dot: {
@@ -21,6 +21,10 @@ const config = {
   pas_asset_hub: {
     descriptor: pas_asset_hub,
     providers: ['wss://pas-rpc.stakeworld.io/assethub'],
+  },
+  educhain: {
+    descriptor: educhain,
+    providers: ['wss://rpc.web3educhain.xyz'],
   },
 } as const
 

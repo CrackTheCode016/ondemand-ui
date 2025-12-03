@@ -1,5 +1,5 @@
 {
-  "name": "ondemand-ui",
+  "name": "educhain-dashboard",
   "type": "module",
   "version": "0.0.0",
   "private": true,
@@ -11,6 +11,7 @@
     "postinstall": "papi"
   },
   "dependencies": {
+    "@iconify-json/material-symbols": "^1.2.46",
     "@noble/hashes": "^2.0.1",
     "@polkadot-api/react-components": "^0.4.1",
     "@polkadot-labs/hdkd": "^0.0.25",
@@ -18,7 +19,8 @@
     "@talismn/connect-wallets": "^1.2.8",
     "polkadot-api": "^1.16.1",
     "polkadot-ondemand-core": "file:../../coretime/ondemand",
-    "vue": "^3.5.18"
+    "vue": "^3.5.18",
+    "vue-router": "^4.6.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^5.2.1",

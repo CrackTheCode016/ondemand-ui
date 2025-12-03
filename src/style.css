@@ -6,14 +6,47 @@
   max-width: 1200px;
 }
 
-/* to enable dark mode, remove data-theme="light" from html tag */
 @plugin "daisyui/theme" {
-  name: "light";
+  name: "hacker";
   default: true;
+  primary: "#A8E000";
+  secondary: "#A8E000";
+  accent: "#A8E000";
+  neutral: "#1a1a1a";
+  "base-100": "#000000";
+  "base-200": "#0a0a0a";
+  "base-300": "#121212";
+  "base-content": "#A8E000";
+  info: "#A8E000";
+  success: "#A8E000";
+  warning: "#ffff00";
+  error: "#ff0000";
   --radius-selector: 0rem;
   --radius-field: 0rem;
   --radius-box: 0rem;
   --depth: 0;
+  --border-color: "#333333";
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: #000000;
+  color: #A8E000;
+}
+
+code, pre, .font-mono {
+  font-family: 'Space Mono', monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+h1 {
+  border-bottom: 2px solid #A8E000;
+  display: inline-block;
 }
 
 @keyframes flash-highlight {
